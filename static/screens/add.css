@@ -1,0 +1,27 @@
+.image{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.group1,
+.group2,
+.group3{
+    margin-top: 15px;
+}
+
+.btn-primary{
+    margin-top: 30px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+.message{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}

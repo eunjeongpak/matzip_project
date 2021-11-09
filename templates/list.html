@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}
+맛집 리스트 - 검색 결과
+{% endblock %}
+
+{% block content %}
+
+<table id="table" class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Category</th>
+      <th scope="col">Rating</th>
+      <th scope="col">Review</th>
+      <th scope="col">Link</th>
+      <th scope="col">Address</th>
+      <th scope="col">Hour</th>
+      <th scope="col">Telephone</th>
+      <th scope="col">University</th>
+    </tr>
+  </thead>
+
+  <tbody>
+        {% for i in data %}        <! -- for tag start -->
+        <tr>
+            <th scope="row">{{i.index}}</th>
+            <td>{{ i.name }}</td>
+            <td>{{ i.category }}</td>
+            <td>{{ i.rating }}</td>
+            <td>{{ i.review }}</td>
+            <td>{{ i.link }}</td>
+            <td>{{ i.addr }}</td>
+            <td>{{ i.hour }}</td>
+            <td>{{ i.tel }}</td>
+            <td>{{ i.univ }}</td>
+        </tr>
+        {% endfor %}                          <! -- for tag end -->
+  </tbody>
+</table>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    $(document).ready(function () {
+      $('#table').DataTable({
+        columns: [
+          {orderable: false, searchable: false},
+          {orderable: false},
+          {orderable: false},
+          {searchable: false},
+          {searchable: false},
+          {orderable: false, searchable: false},
+          {orderable: false, searchable: false},
+          {orderable: false, searchable: false},
+          {orderable: false}
+          null],
+      });
+    });
+  </script>
+{% endblock %}
+
+

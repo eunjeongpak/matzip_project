@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+맛집 리스트 - 검색
+{% endblock %}
+
+{% block content %}
+<div id="search">
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="대학교를 검색하세요." aria-label="대학교를 검색하세요." aria-describedby="button-addon2">
+  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+</div>
+</div>
+
+<div class="image">
+  <img class="univ_image" src="{{url_for('static', filename = 'images/서울대학교.jpg')}}">
+  <img class="univ_image" src="{{url_for('static', filename = 'images/연세대학교.png')}}">
+  <img class="univ_image" src="{{url_for('static', filename = 'images/고려대학교.jpg')}}">
+  <img class="univ_image" src="{{url_for('static', filename = 'images/서강대학교.jpg')}}">
+  <img class="univ_image" src="{{url_for('static', filename = 'images/성균관대학교.jpg')}}">
+</div>
+
+<div class="image">
+  <img class="univ_image" src="{{url_for('static', filename = 'images/한양대학교.jpg')}}">
+  <img class="univ_image" src="{{url_for('static', filename = 'images/중앙대학교.jpg')}}">
+  <img class="univ_image" src="{{url_for('static', filename = 'images/경희대학교.bmp')}}">
+  <img class="univ_image" src="{{url_for('static', filename = 'images/한국외국어대학교.png')}}">
+  <img class="univ_image" src="{{url_for('static', filename = 'images/홍익대학교.jpg')}}">
+</div>
+
+{% endblock %}

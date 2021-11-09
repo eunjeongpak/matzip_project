@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+@import "screens/search.css";
+@import "screens/add.css";
+
+/* font-family: 'Times New Roman', sans-serif; */
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
