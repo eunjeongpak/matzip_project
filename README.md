@@ -11,4 +11,4 @@
   - 2 크롤링한 데이터 전처리 후 postgresql에 저장
   - 3 FLASK를 활용해 웹 애플리케이션 구축
   - 4 FLASK와 postgresql 데이터베이스 연결
-   
+  - 5 웹 CRUD 구현 및 지도 시각화
