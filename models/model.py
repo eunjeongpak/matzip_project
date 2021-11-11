@@ -1,7 +1,7 @@
 from run import db
 
 class Restaurant(db.Model):
-    __table__ = db.Model.metadata.tables['univ_res']
+    __table__ = db.Model.metadata.tables['univ_restaurant']
 
     __mapper_args__ = {
         'primary_key': [__table__.c.index]

@@ -49,7 +49,7 @@ min_lat = 33.0
 max_lng = 132.0
 min_lng = 126.0
 
-# df 위경도 추가
+# 위경도 추가
 for place in df["addr"]:
     tmp = gmaps.geocode(place, language="ko")
 
@@ -76,16 +76,14 @@ for place in df["addr"]:
 
 print("위경도 추가 완료")
 
-# list -> dataframe, 열 이름 변경
+# list를 데이터 프레임으로 변경 및 열 이름 변경
 df2 = pd.DataFrame(lat)
 df2 = df2.rename(columns={0: "lat"})
 df3 = pd.DataFrame(lng)
 df3 = df3.rename(columns={0: "lng"})
 
-# dataframe 3개 합치기
+# dataframe 3개 합치고 위경도 0인 행 삭제 -> datashape = (3459, 11)
 df = pd.concat([df, df2, df3], axis=1)
-
-# 위경도 0인 행 삭제
 df = df.query("lat != '0'")
 
 # 최종 csv로 저장
@@ -95,4 +93,4 @@ df.to_csv("대학교.csv", encoding="utf-8-sig")
 from sqlalchemy import create_engine
 engine = create_engine('postgresql://bihifqmu:bQVDAoxN9Wc8FHqIYoDVJDoR3bpO5QHx@rosie.db.elephantsql.com/bihifqmu')
 
-df.to_sql("univ_res", engine)
+df.to_sql("univ_restaurant", engine)
