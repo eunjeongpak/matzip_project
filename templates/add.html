@@ -5,42 +5,19 @@
 {% endblock %}
 
 {% block content %}
+<div class="add_list">
+<div>
+<select  class="form-select" aria-label="Default select example" onchange="if(this.value) location.href=(this.value);">
+    <option selected>추가 리스트</option>
+    <option value="/add/add_res">맛집 추가</option>
+    <option value="/add/add_list">추가한 맛집 리스트</option>
+</select>
+</div>
+</div>
+
 <div class='image'>
   <img class='image1' src="https://cdn.pixabay.com/photo/2021/02/06/19/29/pancakes-5989136_960_720.jpg">
 </div>
-
-{% if message%}
-  <p class='message'>{{ message }}</p>
-{% endif %}
-
-<form action='submit' method='POST'>
-  <div class="input-group group1">
-    <span class="input-group-text">UserName</span>
-    <input type="text" placeholder="사용자 이름을 입력하세요." aria-label="UserName" class="form-control" name='UserName'>
-  </div>
-
-  <div class="input-group group2">
-    <span class="input-group-text">Name</span>
-    <input type="text" placeholder="추천하고 싶은 맛집을 입력하세요." aria-label="Name" class="form-control" name='Name'>
-    <span class="input-group-text">Address</span>
-    <input type="text" placeholder="전체 주소를 입력하세요." aria-label="Address" class="form-control" name='Address'>
-    <span class="input-group-text">Address2</span>
-    <input type="text" placeholder="구를 입력하세요. EX>마포구" aria-label="Address" class="form-control" name='Address2'>
-  </div>
-
-  <div class="input-group group3">
-    <span class="input-group-text">Menu</span>
-    <input type="text" placeholder="맛집 대표 메뉴를 입력하세요. EX>쌀국수, 피자" aria-label="Menu" class="form-control" name='Menu'>
-    <span class="input-group-text">Price</span>
-    <input type="text" placeholder="대표 메뉴 가격을 입력하세요. EX> 10000" aria-label="Price" class="form-control" name='Price'>
-  </div>
-
-  <div class="button">
-    <input class="btn btn-primary" type="submit" value="Submit">
-  </div>
-
-</form>
-
 {% endblock %}
 
 

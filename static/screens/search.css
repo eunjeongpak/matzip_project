@@ -4,7 +4,7 @@
     margin-right: 100px;
     }
 
-form {
+#search_univ{
     display: flex;
     }
 
@@ -16,3 +16,4 @@ form {
 .img {
     display:flex;
 }
+

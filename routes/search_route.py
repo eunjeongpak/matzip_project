@@ -1,5 +1,4 @@
 from flask import Blueprint, render_template, request, session
-from sqlalchemy import desc
 from run import db
 from models.model import Restaurant
 import pandas as pd

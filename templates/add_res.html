@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}
+맛집 리스트 - 추가
+{% endblock %}
+
+{% block content %}
+<div class="add_list">
+<div>
+<select  class="form-select" aria-label="Default select example" onchange="if(this.value) location.href=(this.value);">
+    <option selected>추가 리스트</option>
+    <option value="/add/add_res">맛집 추가</option>
+    <option value="/add/add_list">추가한 맛집 리스트</option>
+</select>
+</div>
+</div>
+
+<div class='image'>
+  <img class='image1' src="https://cdn.pixabay.com/photo/2021/02/06/19/29/pancakes-5989136_960_720.jpg">
+</div>
+
+{% if message%}
+  <p class='message'>{{ message }}</p>
+{% endif %}
+
+<form id="add_matzip" method='POST' action='success'>
+  <div class="input-group group1">
+    <span class="input-group-text">Name</span>
+      <input name="name" type="text" class="form-control" placeholder="추천하고 싶은 맛집을 입력하세요." aria-label="name">
+  </div>
+  <div class="input-group group2">
+    <span class="input-group-text">Category</span>
+      <input name="category" type="text" class="form-control" placeholder="카테고리를 입력하세요. EX>한식, 양식, 중식, 카페.." aria-label="category">
+  </div>
+  <div class="input-group group3">
+    <span class="input-group-text">Address</span>
+      <input name="addr" type="text" class="form-control" placeholder="주소를 입력하세요." aria-label="addr">
+  </div>
+  <div class="input-group group4">
+    <span class="input-group-text">University</span>
+      <input name="univ" type="text" class="form-control" placeholder="대학교를 입력하세요." aria-label="univ">
+  </div>
+</div>
+
+  <div class="button">
+    <input class="btn btn-primary" type="submit" value="Submit">
+  </div>
+
+</form>
+
+{% endblock %}
+
+
+
+
+

@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 '''
 set FLASK_APP=run.py
 $env:FLASK_APP = "run"
@@ -17,6 +18,7 @@ db = SQLAlchemy(app)
 
 db.init_app(app)
 db.Model.metadata.reflect(db.engine)
+migrate = Migrate(app, db)
 
 from routes.add_route import bp as add_bp
 from routes.search_route import bp as search_bp

@@ -5,9 +5,19 @@
 {% endblock %}
 
 {% block content %}
+<div class="add_list">
+<div>
+<select  class="form-select" aria-label="Default select example" onchange="if(this.value) location.href=(this.value);">
+    <option selected>추가 리스트</option>
+    <option value="/add/add_res">맛집 추가</option>
+    <option value="/add/add_list">추가한 맛집 리스트</option>
+</select>
+</div>
+</div>
+
 <div class='image'>
   <img class='image1' src="https://cdn.pixabay.com/photo/2021/02/06/19/29/pancakes-5989136_960_720.jpg">
 </div>
 
-<div style="background-color:#e6dccc; text-align: center; margin-top: 20px;">입력하신 맛집이 맛집 리스트에 성공적으로 추가되었습니다!</div>
+<div id="success">입력하신 맛집이 맛집 리스트에 성공적으로 추가되었습니다!</div>
 {% endblock %}
