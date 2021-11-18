@@ -25,8 +25,13 @@
     ![image](https://user-images.githubusercontent.com/76864400/142368911-e388b318-8edb-47e7-ac25-87791b2d7591.png)
 
   4. FLASK와 Postgresql 데이터베이스 연결해 웹 CRUD 구현
-  
+    ![image](https://user-images.githubusercontent.com/76864400/142374867-9e4f8074-86cb-4edd-a2a9-2392fd6c97a8.png)
+    ![image](https://user-images.githubusercontent.com/76864400/142375045-8ac9c94a-ac63-4a8c-acbf-bed8b7055635.png)
+
+
   5. folium 사용해 웹에서 맛집 지도 시각화
+    ![image](https://user-images.githubusercontent.com/76864400/142374969-675463f6-fc70-4ea6-822d-edd5daa01fa0.png)
+
   
   6. 맛집 리뷰 분석 및 추천시스템 구축 (*아직 진행 중)
   
