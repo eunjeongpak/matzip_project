@@ -9,6 +9,11 @@
 ### 프로젝트 목적
     대학교 주변 맛집 데이터를 크롤링해 서울시 10개 대학교 주변 맛집 관련 데이터 제공 및 추천시스템을 통한 추천 서비스 제공
 
+### DB 설계_Postgresql
+  ![image](https://user-images.githubusercontent.com/76864400/144953861-989c306e-237d-482e-96dd-0fba46a49dc5.png)
+  
+    크롤링한 데이터는 univ_restaurant table에 저장, 사용자가 추가(수정or삭제)할 수 있는 데이터는 univ_new에 저장
+
 ### 프로젝트 분석 방법 및 내용 
   1. selenium 활용해 카카오맵에서 데이터 웹 크롤링해 데이터 수집
     ![image](https://user-images.githubusercontent.com/76864400/142368454-9128e314-23b9-48dc-b807-ffad80c628f2.png)
