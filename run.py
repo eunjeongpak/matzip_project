@@ -9,29 +9,27 @@ set FLASK_DEBUG=1
 flask run
 '''
 
-def create_app():
-    app = Flask(__name__)
-    app.secret_key = 'super secret key'
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://bihifqmu:bQVDAoxN9Wc8FHqIYoDVJDoR3bpO5QHx@rosie.db.elephantsql.com/bihifqmu'
+app = Flask(__name__)
+app.secret_key = 'super secret key'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://bihifqmu:bQVDAoxN9Wc8FHqIYoDVJDoR3bpO5QHx@rosie.db.elephantsql.com/bihifqmu'
 
-    db = SQLAlchemy(app)
+db = SQLAlchemy(app)
 
-    db.init_app(app)
-    db.Model.metadata.reflect(db.engine)
-    migrate = Migrate(app, db)
+db.init_app(app)
+db.Model.metadata.reflect(db.engine)
+migrate = Migrate(app, db)
 
-    from routes.add_route import bp as add_bp
-    from routes.search_route import bp as search_bp
-    from routes.recommend_route import bp as recommend_bp
-    app.register_blueprint(add_bp)
-    app.register_blueprint(search_bp)
-    app.register_blueprint(recommend_bp)
+from routes.add_route import bp as add_bp
+from routes.search_route import bp as search_bp
+from routes.recommend_route import bp as recommend_bp
+app.register_blueprint(add_bp)
+app.register_blueprint(search_bp)
+app.register_blueprint(recommend_bp)
 
-    @app.route('/')
-    def index():
-        return render_template('index.html'), 200
+@app.route('/')
+def index():
+    return render_template('index.html'), 200
 
-    return app
 
 
