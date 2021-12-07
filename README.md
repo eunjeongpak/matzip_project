@@ -33,9 +33,9 @@
     ![image](https://user-images.githubusercontent.com/76864400/142374969-675463f6-fc70-4ea6-822d-edd5daa01fa0.png)
 
   
-  6. 맛집 리뷰 분석 및 추천시스템 구축 (*아직 진행 중)
+  6. 추천시스템 구축
   
-  7. 헤로쿠 배포 (*이번주 내로 완료할 예정)
+  7. 헤로쿠 배포
 
 
 ### 프로젝트 사용 언어: python
