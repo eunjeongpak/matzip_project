@@ -44,6 +44,10 @@
 
 
   7. 헤로쿠 배포
+      
+      
+    https://matzipapp.herokuapp.com/
+    (현재 문제 파악 및 수정 중으로 뜨지 않습니다*)
     
 
 ### 프로젝트 사용 언어: python
