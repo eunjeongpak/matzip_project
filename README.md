@@ -1,6 +1,6 @@
 # matzip_project
   - 작성자 : 박은정
-  - 작성날짜 : 2021/11/18
+  - 작성날짜 : 2021/12/07
   - GITHUB : https://github.com/eunjeongpak/matzip_project
  
 ### 프로젝트 주제
