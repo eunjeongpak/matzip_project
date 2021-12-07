@@ -37,7 +37,7 @@
             <td>{{ i.addr }}</td>
             <td>{{ i.univ }}</td>
             <td><a href="/update/{{i.id}}" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit{{i.id}}">Edit</a>
-                <a href="" class="btn btn-danger btn-xs" onclick="return confirm('Are You Sure To Delete?')">Delete</a>
+                <a href="/add/add_list/delete/{{i.id}}" class="btn btn-danger btn-xs" onclick="return confirm('Are You Sure To Delete?')">Delete</a>
             </td>
         </tr>
 
@@ -49,9 +49,10 @@
               <h4 class="modal-title">Update Info</h4>
           </div>
           <div class="modal-body">
-              <form action="" method="POST">
+              <form action="{{url_for('add.add_list_update')}}" method="POST">
                   <div class="form-group">
                       <label>Name: </label>
+                      <input type="hidden" name="id" value="{{i.id}}">
                       <input type="text" class="form-control" name="name" value="{{i.name}}">
                   </div>
                   <div class="form-group">

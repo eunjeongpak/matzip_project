@@ -6,9 +6,11 @@
 
 {% block content %}
 <div id="search">
+<form id="rec_search" method="get" action="/recommend/result">
 <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="키워드: " aria-label="키워드: " aria-describedby="button-addon2">
-  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+  <input name="res_name" type="text" class="form-control" placeholder="키워드: " aria-label="키워드: " aria-describedby="button-addon2">
+  <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
 </div>
+</form>
 </div>
 {% endblock %}
